@@ -21,7 +21,7 @@ try {
         $stmt = $this->dbConnection->prepare('select count(id) from orders');
         $stmt->execute();
         $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-        echo fetchColumnfetchColumn$stmt->fetchColumn(); //grazina array sudaryta visa is eiluciu
+        echo $stmt->fetchColumn(); //grazina array sudaryta visa is eiluciu
 } catch (PDOException $e) {
         echo "Error: " . $e->getMessage();
     }
