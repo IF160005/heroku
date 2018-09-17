@@ -1,0 +1,23 @@
+.navBar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+body{
+    background: url(backgroundimg.jpg) no-repeat ;
+    background-size: 100%;
+    padding-top: 10%;
+    padding-bottom: 0%;
+}
+div.login {
+    padding-bottom: -20%;
+    margin: 60px;
+    background-color: #ffffff;
+    border: 1px solid white;
+    opacity: 0.8;
+}
+div.login form {
+    margin: 5%;
+    font-weight: bold;
+    color: #000000;
+}

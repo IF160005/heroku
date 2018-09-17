@@ -1,0 +1,39 @@
+<?php
+
+namespace Sigita\Config;
+
+
+class Parameters
+{
+
+    protected static $connectionUrl = "mysql://host=localhost;dbname=web";
+    protected static $connectionUser = "root";
+    protected static $connectionPassword = "";
+    protected static $login = "login";
+    protected static $password = "password";
+
+    public static function getConnectionUrl()
+    {
+        return self::$connectionUrl;
+    }
+
+    public static function getConnectionUser()
+    {
+        return self::$connectionUser;
+    }
+
+    public static function getConnectionPassword()
+    {
+        return self::$connectionPassword;
+    }
+
+    public static function getLogin()
+    {
+        return self::$login;
+    }
+
+    public static function getPassword()
+    {
+        return self::$password;
+    }
+}

@@ -1,0 +1,91 @@
+<!Doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/theme.css">
+    <title> pav</title>
+</head>
+<body>
+<div class="navBar" ;>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Bouquet</a>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="#about">About us</a>
+                <a class="nav-item nav-link" href="#form">Order form</a>
+                <a class="nav-item nav-link disabled" href="index.php?controller=orders">Orders</a>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="rowpic" id="#">
+    <div class="column">
+        <img src="img/img.jpg" class="pic1" alt="flowers">
+    </div>
+    <div class="column">
+        <img src="img/img1.jpg" class="pic1" alt="flowers">
+    </div>
+    <div class="column">
+        <img src="img/img2.jpg" class="pic1" alt="flowers">
+    </div>
+</div>
+<div class="about" id="about">
+    <h3>About us</h3>
+    <p class="font-italic">High quality flowers, exceptional service</p>
+    <p class="font-weight-normal"> Founded in 2016,<i> Bouquets</i> has already earned its name.
+        Our brand is not only considered to be one of the most potential flower business nowadays,
+        it is often also described as “unique” and “breathtaking”. We specialize in providing flower bouquets for any
+        occasions,
+        such as weddings, birthdays and any other. Flower bouquets range from elegant arrangements of roses,
+        youthful yellow and white daisies to festive rainbows of tulips. The flower bouquet itself and its price depends
+        on our customers’
+        needs.</p>
+    <p class="font-weight-normal">Based in Kaunas, Lithuania.</p>
+</div>
+<div class="flowers">
+    <img src="img/flowers.jpg" alt="flowers">
+</div>
+<div class="container" id="form">
+    <h4 class="center">Order form</h4>
+    <?php if($emptyField==true){ ?>
+    <div class="alert alert-danger" role="alert">
+         Please fill in all required fields.
+    </div>
+    <?php } ?>
+    <form action="index.php?controller=index&action=order#form" method="post">
+        <div class="form-group">
+            <label>
+                First name:
+            </label>
+            <input class="form-control" type="text" name="formdata[name]" value="">
+        </div>
+        <div class="form-group">
+            <label>
+                Last name:
+            </label>
+            <input class="form-control" type="text" name="formdata[lastname]" value="">
+        </div>
+        <div class="form-group">
+            <label>Email:</label>
+            <input class="form-control" type="text" name="formdata[email]" value="">
+        </div>
+        <div class="form-group">
+            <label>
+                Number:
+            </label>
+            <input class="form-control" type="text" name="formdata[number]" value="">
+        </div>
+        <div class="form-group">
+            <label>
+                Address:
+            </label>
+            <input class="form-control" type="text" name="formdata[address]" value="">
+        </div>
+        <input class="btn btn-outline-secondary" type="submit" value="Submit">
+    </form>
+</div>
+</div>
+</body>
+</html>

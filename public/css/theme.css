@@ -1,0 +1,42 @@
+body{
+    background-color: #ececf6;
+}
+.navBar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.rowpic {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 6%;
+}
+.column {
+    flex: 33.33%;
+    padding: 55.5px;
+    width: 100%;
+    float: none;
+}
+.pic1 {
+    transition-property: background, border-radius;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+}
+.pic1:hover{
+    border-radius: 80%;
+}
+.about{
+    padding-top: 5%;
+    text-align: left;
+    padding-left:40px;
+}
+.flowers {
+    padding-left: 22%;
+    opacity: 0.5;
+}
+.container{
+    padding-top: 10%;
+    width: 50%;
+    padding-bottom: 5%;
+}

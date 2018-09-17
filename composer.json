@@ -1,5 +1,7 @@
 {
   "autoload": {
-    "psr-4": {"Sigita\\": "src/"}
+    "psr-4": {
+      "Sigita\\": "src/"
+    }
   }
 }

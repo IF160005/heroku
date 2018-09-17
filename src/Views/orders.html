@@ -1,0 +1,119 @@
+<!Doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script src="js/bootstrap.min.js"></script>
+    <title></title>
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-light bg-faded">
+    <a href="/" class="navbar-brand" href="#">Orders</a>
+    <div class="navbar-collapse collapse" id="navbar5">
+        <form class="mx-2 my-auto d-inline w-100"
+              action="index.php?controller=orders&sorting=<?php echo $sorting?>&direction=<?php echo $direction?>"
+              method="post">
+            <div class="input-group">
+                <input type="text" class="form-control border border-right-0" placeholder="Search..." name="search"
+                       value="<?php echo $search?>">
+                <span class="input-group-append">
+                    <button class="btn btn-outline-secondary border border-left-0" type="submit">
+                    <i class="fa fa-search"></i>
+                    </button>
+              </span>
+            </div>
+        </form>
+        <ul class="navbar-nav">
+            <li class="nav-item ">
+                <a class="nav-link" href="index.php?controller=orders&action=logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid">
+    <table class="table table-bordered">
+        <tr>
+            <th>
+                Id
+                <a href="index.php?controller=orders&search=<?php echo $search?>&sorting=id&direction=asc">
+                    <i class="fas fa-sort-up"></i>
+                </a>
+                <a href="index.php?controller=orders&search=<?php echo $search?>&sorting=id&direction=desc">
+                    <i class="fas fa-sort-down"></i>
+                </a>
+            </th>
+            <th>
+                Name
+                <a href="index.php?controller=orders&search=<?php echo $search?>&sorting=name&direction=asc">
+                    <i class="fas fa-sort-up"></i>
+                </a>
+                <a href="index.php?controller=orders&search=<?php echo $search?>&sorting=name&direction=desc">
+                    <i class="fas fa-sort-down"></i>
+                </a>
+            </th>
+            <th>
+                Last Name
+                <a href="index.php?controller=orders&search=<?php echo $search?>&sorting=lastname&direction=asc">
+                    <i class="fas fa-sort-up"></i>
+                </a>
+                <a href="index.php?controller=orders&search=<?php echo $search?>&sorting=lastname&direction=desc">
+                    <i class="fas fa-sort-down"></i>
+                </a>
+            </th>
+            <th>
+                Email
+                <a href="index.php?controller=orders&search=<?php echo $search?>&sorting=email&direction=asc">
+                    <i class="fas fa-sort-up"></i>
+                </a>
+                <a href="index.php?controller=orders&search=<?php echo $search?>&sorting=email&direction=desc">
+                    <i class="fas fa-sort-down"></i>
+                </a>
+            </th>
+            <th>
+                Number
+                <a href="index.php?controller=orders&search=<?php echo $search?>&sorting=number&direction=asc">
+                    <i class="fas fa-sort-up"></i>
+                </a>
+                <a href="index.php?controller=orders&search=<?php echo $search?>&sorting=number&direction=desc">
+                    <i class="fas fa-sort-down"></i>
+                </a>
+            </th>
+            <th>
+                Address
+                <a href="index.php?controller=orders&search=<?php echo $search?>&sorting=address&direction=asc">
+                    <i class="fas fa-sort-up"></i>
+                </a>
+                <a href="index.php?controller=orders&search=<?php echo $search?>&sorting=address&direction=desc">
+                    <i class="fas fa-sort-down"></i>
+                </a>
+            </th>
+        </tr>
+        <?php foreach($orders as $value){  ?>
+        <tr>
+            <td><?php echo $value["Id"]; ?></td>
+            <td><?php echo $value["Name"]; ?></td>
+            <td><?php echo $value["Last_Name"]; ?></td>
+            <td><?php echo $value["Email"]; ?></td>
+            <td><?php echo $value["Number"]; ?></td>
+            <td><?php echo $value["Address"]; ?></td>
+        </tr>
+        <?php } ?>
+    </table>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            <?php  for($i=0;$i<$numberOfPages;$i++){ ?>
+            <li class="page-item">
+                <a class="page-link"
+                   href="index.php?controller=orders&search=<?php echo $search?>&sorting=<?php echo $sorting?>&direction=<?php echo $direction?>&numberofpage=<?php echo $i+1 ?>">
+                    <?php echo $i+1 ?>
+                </a>
+            </li>
+            <?php  }  ?>
+        </ul>
+    </nav>
+</div>
+</body>
+</html>
