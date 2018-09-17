@@ -18,7 +18,7 @@ try {
 
 
     try {
-        $stmt = $this->dbConnection->prepare('select count(id) from orders');
+        $stmt = $dbConnection->prepare('select count(id) from orders');
         $stmt->execute();
         $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
         echo $stmt->fetchColumn(); //grazina array sudaryta visa is eiluciu
