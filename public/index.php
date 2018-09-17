@@ -37,7 +37,7 @@ use Sigita\Controller\IndexController;
 use Sigita\Controller\OrdersController;
 
 if (isset($_GET["controller"])) {
-    $controllerClass = $_GET["controller"];
+    $controllerClass = ucfirst($_GET["controller"]);
 } else {
     $controllerClass = "Index";
 }
