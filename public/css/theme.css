@@ -3,6 +3,7 @@ body{
 }
 .navBar{
     position: fixed;
+    z-index: 1;
     top: 0;
     width: 100%;
 }
@@ -34,6 +35,7 @@ body{
 .flowers {
     padding-left: 22%;
     opacity: 0.5;
+    position: relative;
 }
 .container{
     padding-top: 10%;
