@@ -1,5 +1,6 @@
 <?php
-
+error_reporting(E_ALL);
+ini_set("display_errors",1);
 require __DIR__ . "/../vendor/autoload.php";
 
 session_start();
@@ -25,4 +26,5 @@ if (class_exists($contr)) {
     if (method_exists($contr, $funcName)) {
         $controller->$funcName();
     }
+
 }
